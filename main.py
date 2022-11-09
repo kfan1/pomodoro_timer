@@ -77,8 +77,8 @@ def seconds_countdown(seconds):
     global LONG_BREAK_MIN
     minutes = math.floor(seconds / 60)
     seconds1 = "{:02d}".format(
-        int(seconds % 60))                                          ##### Dynamic typing is the ability to change the variable type when reassigning a variable
-    canvas.itemconfig(timer_text, text=f"{minutes}:{seconds1}")     ##### only available in python
+        int(seconds % 60))
+    canvas.itemconfig(timer_text, text=f"{minutes}:{seconds1}")
     if seconds > 0:
         timer = window.after(1000, seconds_countdown, seconds - 1)
     else:
